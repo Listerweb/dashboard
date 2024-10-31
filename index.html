@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/charts.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar">
+      <img class="sidebar__logo" src="./images/TESLA.svg" alt="" />
+
+      <div class="sidebar__container">
+        <ul class="nav">
+          <li class="nav__item nav__item--active">
+            <svg
+              width="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.0475 20.2647V14.2085H7.42968C6.92645 14.2085 6.58643 13.6234 6.83124 13.1406L11.8363 2.65189C12.1491 1.96435 13.1148 2.21304 13.1148 2.98835V9.11774H16.5694C17.0726 9.11774 17.399 9.68826 17.1814 10.171L12.3396 20.5866C12.0131 21.2887 11.0475 21.0401 11.0475 20.2647Z"
+                fill="currentColor"
+                fill-opacity="0.7"
+              />
+            </svg>
+
+            <span>Report</span>
+          </li>
+          <li class="nav__item">
+            <svg
+              width="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.0475 20.2647V14.2085H7.42968C6.92645 14.2085 6.58643 13.6234 6.83124 13.1406L11.8363 2.65189C12.1491 1.96435 13.1148 2.21304 13.1148 2.98835V9.11774H16.5694C17.0726 9.11774 17.399 9.68826 17.1814 10.171L12.3396 20.5866C12.0131 21.2887 11.0475 21.0401 11.0475 20.2647Z"
+                fill="currentColor"
+                fill-opacity="0.7"
+              />
+            </svg>
+
+            <span>Library</span>
+          </li>
+          <li class="nav__item">
+            <svg
+              width="27"
+              height="24"
+              viewBox="0 0 27 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.337 8C12.337 9.66 10.8913 11 9.08697 11C7.28262 11 5.8261 9.66 5.8261 8C5.8261 6.34 7.28262 5 9.08697 5C10.8913 5 12.337 6.34 12.337 8ZM21.0326 8C21.0326 9.66 19.587 11 17.7826 11C15.9783 11 14.5217 9.66 14.5217 8C14.5217 6.34 15.9783 5 17.7826 5C19.587 5 21.0326 6.34 21.0326 8ZM9.08697 13C6.55436 13 1.47827 14.17 1.47827 16.5V18C1.47827 18.55 1.9674 19 2.56523 19H15.6087C16.2065 19 16.6957 18.55 16.6957 18V16.5C16.6957 14.17 11.6196 13 9.08697 13ZM16.7283 13.05C17.1087 13.02 17.4674 13 17.7826 13C20.3152 13 25.3913 14.17 25.3913 16.5V18C25.3913 18.55 24.9022 19 24.3044 19H18.6739C18.7935 18.69 18.8696 18.35 18.8696 18V16.5C18.8696 15.03 18.0109 13.92 16.7717 13.09C16.7685 13.087 16.7652 13.083 16.7616 13.0787C16.7533 13.0688 16.7434 13.057 16.7283 13.05Z"
+                fill="#4D4D4D"
+              />
+            </svg>
+
+            <span>People</span>
+          </li>
+          <li class="nav__item">
+            <svg
+              width="27"
+              height="24"
+              viewBox="0 0 27 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M22.1304 3H4.7391C3.54345 3 2.56519 3.9 2.56519 5V19C2.56519 20.1 3.54345 21 4.7391 21H22.1304C23.3261 21 24.3043 20.1 24.3043 19V5C24.3043 3.9 23.3261 3 22.1304 3ZM10.1739 17H6.91301C6.31519 17 5.82606 16.55 5.82606 16C5.82606 15.45 6.31519 15 6.91301 15H10.1739C10.7717 15 11.2608 15.45 11.2608 16C11.2608 16.55 10.7717 17 10.1739 17ZM10.1739 13H6.91301C6.31519 13 5.82606 12.55 5.82606 12C5.82606 11.45 6.31519 11 6.91301 11H10.1739C10.7717 11 11.2608 11.45 11.2608 12C11.2608 12.55 10.7717 13 10.1739 13ZM10.1739 9H6.91301C6.31519 9 5.82606 8.55 5.82606 8C5.82606 7.45 6.31519 7 6.91301 7H10.1739C10.7717 7 11.2608 7.45 11.2608 8C11.2608 8.55 10.7717 9 10.1739 9ZM20.7174 11.12L17.2717 14.29C16.8478 14.68 16.1521 14.68 15.7282 14.29L14.1956 12.87C13.7717 12.48 13.7717 11.85 14.1956 11.46C14.6195 11.07 15.3043 11.07 15.7282 11.46L16.5 12.17L19.1848 9.7C19.6087 9.31 20.2934 9.31 20.7174 9.7L20.7282 9.71C21.1413 10.1 21.1413 10.74 20.7174 11.12Z"
+                fill="black"
+                fill-opacity="0.7"
+              />
+            </svg>
+
+            <span>Activities</span>
+          </li>
+        </ul>
+
+        <h2 class="small-title">Support</h2>
+        <ul class="nav">
+          <li class="nav__item">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.0001 3C11.5401 3 11.0701 3.04 10.6001 3.14C7.84007 3.67 5.64007 5.9 5.12007 8.66C4.64007 11.27 5.60007 13.67 7.34007 15.22C7.77007 15.6 8.00007 16.13 8.00007 16.69V19C8.00007 20.1 8.90007 21 10.0001 21H10.2801C10.6301 21.6 11.2601 22 12.0001 22C12.7401 22 13.3801 21.6 13.7201 21H14.0001C15.1001 21 16.0001 20.1 16.0001 19V16.69C16.0001 16.14 16.2201 15.6 16.6401 15.23C18.0901 13.95 19.0001 12.08 19.0001 10C19.0001 6.13 15.8701 3 12.0001 3ZM12.5001 14H11.5001V11.41L9.67007 9.59L10.3801 8.88L12.0001 10.5L13.6201 8.88L14.3301 9.59L12.5001 11.42V14ZM13.5001 19C13.4901 19 13.4801 18.99 13.4701 18.99V19H10.5301V18.99C10.5201 18.99 10.5101 19 10.5001 19C10.2201 19 10.0001 18.78 10.0001 18.5C10.0001 18.22 10.2201 18 10.5001 18C10.5101 18 10.5201 18.01 10.5301 18.01V18H13.4701V18.01C13.4801 18.01 13.4901 18 13.5001 18C13.7801 18 14.0001 18.22 14.0001 18.5C14.0001 18.78 13.7801 19 13.5001 19ZM13.5001 17H10.5001C10.2201 17 10.0001 16.78 10.0001 16.5C10.0001 16.22 10.2201 16 10.5001 16H13.5001C13.7801 16 14.0001 16.22 14.0001 16.5C14.0001 16.78 13.7801 17 13.5001 17Z"
+                fill="black"
+                fill-opacity="0.7"
+              />
+            </svg>
+
+            <span>Get Started</span>
+          </li>
+          <li class="nav__item">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_208_463)">
+                <path
+                  d="M19.4301 12.98C19.4701 12.66 19.5001 12.34 19.5001 12C19.5001 11.66 19.4701 11.34 19.4301 11.02L21.5401 9.37C21.7301 9.22 21.7801 8.95 21.6601 8.73L19.6601 5.27C19.5401 5.05 19.2701 4.97 19.0501 5.05L16.5601 6.05C16.0401 5.65 15.4801 5.32 14.8701 5.07L14.4901 2.42C14.4601 2.18 14.2501 2 14.0001 2H10.0001C9.75008 2 9.54008 2.18 9.51008 2.42L9.13008 5.07C8.52008 5.32 7.96008 5.66 7.44008 6.05L4.95008 5.05C4.72008 4.96 4.46008 5.05 4.34008 5.27L2.34008 8.73C2.21008 8.95 2.27008 9.22 2.46008 9.37L4.57008 11.02C4.53008 11.34 4.50008 11.67 4.50008 12C4.50008 12.33 4.53008 12.66 4.57008 12.98L2.46008 14.63C2.27008 14.78 2.22008 15.05 2.34008 15.27L4.34008 18.73C4.46008 18.95 4.73008 19.03 4.95008 18.95L7.44008 17.95C7.96008 18.35 8.52008 18.68 9.13008 18.93L9.51008 21.58C9.54008 21.82 9.75008 22 10.0001 22H14.0001C14.2501 22 14.4601 21.82 14.4901 21.58L14.8701 18.93C15.4801 18.68 16.0401 18.34 16.5601 17.95L19.0501 18.95C19.2801 19.04 19.5401 18.95 19.6601 18.73L21.6601 15.27C21.7801 15.05 21.7301 14.78 21.5401 14.63L19.4301 12.98ZM12.0001 15.5C10.0701 15.5 8.50008 13.93 8.50008 12C8.50008 10.07 10.0701 8.5 12.0001 8.5C13.9301 8.5 15.5001 10.07 15.5001 12C15.5001 13.93 13.9301 15.5 12.0001 15.5Z"
+                  fill="black"
+                  fill-opacity="0.7"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_208_463">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <span>Settings</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="profile">
+        <div class="line"></div>
+
+        <img src="./images/profile.png" class="profile__user" alt="" />
+
+        <h2 class="profile__name">Sam Wheeler</h2>
+        <p class="profile__email">samwheeler@example.com</p>
+      </div>
+    </aside>
+    <main class="container">
+      <div class="header-item">
+        <h2 class="head head--large">Reports</h2>
+        <button class="button">
+          <img src="/images/icons/Download.svg" alt="Download" />
+
+          <span>Download</span>
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="filter">
+        <select class="select" id="">
+          <option class="option">Timeframe: All-time</option>
+          <option class="">This month</option>
+          <option class="">This years</option>
+          <option class="">Custom</option>
+        </select>
+        <select class="select" id="">
+          <option class="option">People: All</option>
+          <option class="">This month</option>
+          <option class="">This years</option>
+          <option class="">Custom</option>
+        </select>
+        <select class="select" id="">
+          <option class="option">Topic: All</option>
+          <option class="">This month</option>
+          <option class="">This years</option>
+          <option class="">Custom</option>
+        </select>
+      </div>
+      <div class="statistics">
+        <div class="statistics-number">
+          <div class="block">
+            <h2 class="head">Active Users</h2>
+            <h2 class="head head--large">27/80</h2>
+          </div>
+          <div class="block">
+            <h2 class="head">Questions Answered</h2>
+            <h2 class="head head--large">3,298</h2>
+          </div>
+          <div class="block">
+            <h2 class="head">Av. Session Length</h2>
+            <h2 class="head head--large">2m 34s</h2>
+          </div>
+          <div class="block">
+            <h2 class="head">Starting Knowledge</h2>
+            <h2 class="head head--large">64%</h2>
+            <svg
+              width="140"
+              height="35"
+              viewBox="0 0 140 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.1"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.53711 23.3759C1.53711 23.3759 6.94939 22.5829 13.1028 24.488C24.8063 28.1114 25.474 21.4761 29.8137 18.2767C33.7841 15.3496 37.0724 17.1355 41.4931 20.7151C44.7537 23.3552 49.5054 27.787 54.4264 27.0735C58.9247 26.4213 62.1136 21.2236 68.3487 19.9017C73.2904 18.854 77.3064 21.7322 82.9968 20.7151C90.7163 19.3354 94.1644 11.2124 99.6816 11.2124C106.491 11.2124 111.285 4.34229 117.48 4.34229C123.638 4.34229 124.474 8.38208 131.21 11.2124C136.36 13.3762 138.838 11.2124 138.838 11.2124V34.3991H1.53711V23.3759Z"
+                fill="url(#paint0_linear_2_2746)"
+              />
+              <path
+                d="M1.53711 19.7745C1.53711 19.7745 6.94939 18.9929 13.1028 20.8705C24.8063 24.4414 25.474 17.9022 29.8137 14.7491C33.7841 11.8644 37.0724 13.6244 41.4931 17.1522C44.7537 19.7541 49.5054 24.1217 54.4264 23.4186C58.9247 22.7758 62.1136 17.6533 68.3487 16.3505C73.2904 15.318 77.3064 18.1546 82.9968 17.1522C90.7163 15.7924 94.1644 7.78703 99.6816 7.78703C106.491 7.78703 111.285 1 117.48 1C123.638 1 123.965 4.99768 130.701 7.78703C135.851 9.91951 138.838 7.78703 138.838 7.78703"
+                stroke="#1B59F8"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_2_2746"
+                  x1="26.3509"
+                  y1="19.5933"
+                  x2="26.3509"
+                  y2="34.3991"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#0062FF" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.01" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="block">
+            <h2 class="head">Current Knowledge</h2>
+            <h2 class="head head--large">86%</h2>
+            <svg
+              width="140"
+              height="35"
+              viewBox="0 0 140 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.1"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.00989 23.3759C1.00989 23.3759 6.42216 22.5829 12.5756 24.488C24.2791 28.1114 24.9467 21.4761 29.2865 18.2767C33.2569 15.3496 36.5452 17.1355 40.9659 20.7151C44.2264 23.3552 48.9782 27.787 53.8992 27.0735C58.3975 26.4213 61.5864 21.2236 67.8215 19.9017C72.7632 18.854 76.7791 21.7322 82.4695 20.7151C90.189 19.3354 93.6372 11.2124 99.1543 11.2124C105.964 11.2124 110.758 4.34229 116.953 4.34229C123.111 4.34229 123.946 8.38208 130.683 11.2124C135.832 13.3762 138.31 11.2124 138.31 11.2124V34.3991H1.00989V23.3759Z"
+                fill="url(#paint0_linear_2_2739)"
+              />
+              <path
+                d="M1.00989 19.7745C1.00989 19.7745 6.42216 18.9929 12.5756 20.8705C24.2791 24.4414 24.9467 17.9022 29.2865 14.7491C33.2569 11.8644 36.5452 13.6244 40.9659 17.1522C44.2264 19.7541 48.9782 24.1217 53.8992 23.4186C58.3975 22.7758 61.5864 17.6533 67.8215 16.3505C72.7632 15.318 76.7791 18.1546 82.4695 17.1522C90.189 15.7924 93.6372 7.78703 99.1543 7.78703C105.964 7.78703 110.758 1 116.953 1C123.111 1 123.438 4.99768 130.174 7.78703C135.324 9.91951 138.31 7.78703 138.31 7.78703"
+                stroke="#1B59F8"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_2_2739"
+                  x1="25.8236"
+                  y1="19.5933"
+                  x2="25.8236"
+                  y2="34.3991"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#0062FF" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.01" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="block">
+            <h2 class="head">Knowledge Gain</h2>
+            <h2 class="head head--large">34%</h2>
+            <svg
+              width="126"
+              height="35"
+              viewBox="0 0 126 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.1"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1 23.3759C1 23.3759 5.88798 22.5829 11.4453 24.488C22.0151 28.1114 22.618 21.4761 26.5374 18.2767C30.1232 15.3496 33.0929 17.1355 37.0854 20.7151C40.0301 23.3552 44.3215 27.787 48.7658 27.0735C52.8284 26.4213 55.7083 21.2236 61.3394 19.9017C65.8024 18.854 69.4294 21.7322 74.5685 20.7151C81.5402 19.3354 84.6544 11.2124 89.637 11.2124C95.7868 11.2124 100.117 4.34229 105.711 4.34229C111.273 4.34229 112.027 8.38208 118.111 11.2124C122.762 13.3762 125 11.2124 125 11.2124V34.3991H1V23.3759Z"
+                fill="url(#paint0_linear_2_2782)"
+              />
+              <path
+                d="M1 19.7745C1 19.7745 5.88798 18.9929 11.4453 20.8705C22.0151 24.4414 22.618 17.9022 26.5374 14.7491C30.1232 11.8644 33.0929 13.6244 37.0854 17.1522C40.0301 19.7541 44.3215 24.1217 48.7658 23.4186C52.8284 22.7758 55.7083 17.6533 61.3394 16.3505C65.8024 15.318 69.4294 18.1546 74.5685 17.1522C81.5402 15.7924 84.6544 7.78703 89.637 7.78703C95.7868 7.78703 100.117 1 105.711 1C111.273 1 111.568 4.99768 117.652 7.78703C122.303 9.91951 125 7.78703 125 7.78703"
+                stroke="#1B59F8"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_2_2782"
+                  x1="23.41"
+                  y1="19.5933"
+                  x2="23.41"
+                  y2="34.3991"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#0062FF" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.01" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="statistics-activity">
+          <div class="activity-month">
+            <h2 class="head">Activity</h2>
+            <button class="button">
+              <span>Month</span>
+              <img src="/images/icons/month-icon.png" alt="Download" />
+            </button>
+          </div>
+          <div class="line"></div>
+          <div class="graph-container">
+            <ul class="graph-container__numbers">
+              <li>400</li>
+              <li>300</li>
+              <li>200</li>
+              <li>100</li>
+              <li>0</li>
+            </ul>
+            <div class="graph-charts">
+              <span class="graph-charts__one" style="height: 60px"></span>
+              <span class="graph-charts__one" style="height: 76px"></span>
+              <span class="graph-charts__one" style="height: 76px"></span>
+              <span class="graph-charts__one" style="height: 122px"></span>
+              <span class="graph-charts__one" style="height: 138px"></span>
+              <span class="graph-charts__one" style="height: 106px"></span>
+              <span class="graph-charts__one" style="height: 60px"></span>
+              <span class="graph-charts__one" style="height: 122px"></span>
+              <span class="graph-charts__one" style="height: 60px"></span>
+              <span class="graph-charts__one" style="height: 138px"></span>
+              <span class="graph-charts__one" style="height: 166px"></span>
+              <span class="graph-charts__one" style="height: 200px"></span>
+            </div>
+          </div>
+        </div>
+        <div class="weakest">
+          <div class="weakest-title">
+            <h2 class="head">Weakest Topics</h2>
+          </div>
+          <div class="topic-statics">
+            <div class="topic-statics__img">
+              <img src="/images/Rectangle 2370.png" alt="" />
+            </div>
+            <div class="topic-statics__row">
+              Food Safety
+              <span class="topic-statics__one" style="width: 100%"></span>
+            </div>
+
+            <div class="topic-statics__count">74% Correct</div>
+          </div>
+          <div class="topic-statics">
+            <div class="topic-statics__img">
+              <img src="/images/Rectangle 2371.png" alt="" />
+            </div>
+            <div class="topic-statics__row">
+              Compliance Basics Procedures
+              <span class="topic-statics__two" style="width: 100%"></span>
+            </div>
+
+            <div class="topic-statics__count">52% Correct</div>
+          </div>
+          <div class="topic-statics">
+            <div class="topic-statics__img">
+              <img src="/images/Rectangle 2372.png" alt="" />
+            </div>
+            <div class="topic-statics__row">
+              Company Networking
+              <span class="topic-statics__three" style="width: 100%"></span>
+            </div>
+
+            <div class="topic-statics__count">36% Correct</div>
+          </div>
+        </div>
+        <div class="strongest">
+          <div class="weakest-title">
+            <h2 class="head">Strongest Topics</h2>
+          </div>
+          <div class="strongest-statics">
+            <div class="strongest-statics__img">
+              <img src="/images/covid.png" alt="" />
+            </div>
+            <div class="strongest-statics__row">
+              Covid Protocols
+              <span class="strongest-statics__one" style="width: 100%"></span>
+            </div>
+
+            <div class="strongest-statics__count">95% Correct</div>
+          </div>
+          <div class="strongest-statics">
+            <div class="strongest-statics__img">
+              <img src="/images/cyber.png" alt="" />
+            </div>
+            <div class="strongest-statics__row">
+              Cyber Security Basics
+              <span class="strongest-statics__two" style="width: 100%"></span>
+            </div>
+
+            <div class="strongest-statics__count">92% Correct</div>
+          </div>
+          <div class="strongest-statics">
+            <div class="strongest-statics__img">
+              <img src="/images/social.png" alt="" />
+            </div>
+            <div class="strongest-statics__row">
+              Social Media Policies
+              <span class="strongest-statics__three" style="width: 100%"></span>
+            </div>
+
+            <div class="strongest-statics__count">89% Correct</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

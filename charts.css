@@ -1,0 +1,33 @@
+.graph-charts {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 32px;
+  
+  
+}
+.graph-charts__one {
+  
+  width: 10px;
+  border-radius: 100px;
+
+  height: 100%;
+  background: #f2f7ff;
+  position: relative;
+  display: inline-block;
+}
+.graph-charts__one::after {
+  content: "";
+  background: linear-gradient(
+    356.64deg,
+    rgba(27, 89, 248, 0.8) 48.49%,
+    rgba(27, 89, 248, 0) 282.14%
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-radius: 100px;
+}
+
